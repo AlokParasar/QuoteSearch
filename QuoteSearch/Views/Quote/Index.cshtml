@@ -1,0 +1,34 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" style="font-weight: bold; font-size:large; vertical-align:middle;padding-top:10px;">
+        Quote
+    </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <table width="100%" border="2" style="font-weight:normal;">
+        <tr>
+            <td>Quote: <label>Q92348</label></td>
+            <td>
+                Status: <select data-val="true" id="SelectStatus" name="SelectStatus">
+                    <option value="">Select Status</option>
+                    <option>Pending</option>
+                    <option>Issued</option>
+                </select>
+            </td>
+            <td>Applicant: <label>James Feather LLC</label></td>
+        </tr>
+        <tr>
+            <td>Quote Date: <label>08/01/2020</label></td>
+            <td>Effective Date: <label>08/06/2020</label></td>
+            <td>
+                Basic - $680.00: @Html.RadioButton("Premium", "Basic") Preferred - $850.00": @Html.RadioButton("Premium", "Preferred")
+                Premier - $1050.00: @Html.RadioButton("Premium", "Premier")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>@Html.ActionLink("Click here to navigate to Search", "Search")</td>
+        </tr>
+    </table>
+</div>
+

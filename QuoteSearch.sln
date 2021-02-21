@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuoteSearch", "QuoteSearch\QuoteSearch.csproj", "{AA02ED6D-B2EE-4313-B6E8-DEFADE59E9A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{5C7BA287-8A84-4F22-B68D-FBC2B48AD5A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment", "Assignment\Assignment.csproj", "{F8A8D94B-B643-4D78-852C-EEF9E97E1CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA02ED6D-B2EE-4313-B6E8-DEFADE59E9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA02ED6D-B2EE-4313-B6E8-DEFADE59E9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA02ED6D-B2EE-4313-B6E8-DEFADE59E9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA02ED6D-B2EE-4313-B6E8-DEFADE59E9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7BA287-8A84-4F22-B68D-FBC2B48AD5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7BA287-8A84-4F22-B68D-FBC2B48AD5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7BA287-8A84-4F22-B68D-FBC2B48AD5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7BA287-8A84-4F22-B68D-FBC2B48AD5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A8D94B-B643-4D78-852C-EEF9E97E1CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A8D94B-B643-4D78-852C-EEF9E97E1CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A8D94B-B643-4D78-852C-EEF9E97E1CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A8D94B-B643-4D78-852C-EEF9E97E1CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85791B64-D36F-452A-A924-FEF53529A2DE}
+	EndGlobalSection
+EndGlobal

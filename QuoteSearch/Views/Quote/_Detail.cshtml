@@ -1,0 +1,60 @@
+﻿@model IEnumerable<QuoteSearch.Models.AdditionalInsureds>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<table>
+
+    <tr>
+        <td>
+            <table width="50%">
+                <tr>
+                    <th style="font-weight: bold; font-size:large; background-color:aqua">Additional Insured</th>
+                </tr>
+                <tr>
+                    <td>@Model.FirstOrDefault().Name</td>
+                </tr>
+                <tr>
+                    <td>@Model.FirstOrDefault().DoB</td>
+                </tr>
+                <tr>
+                    <td>@Model.FirstOrDefault().Coverage%</td>
+                </tr>
+                <tr>
+                    <td><button style="border-color: red;" disabled="disabled">Delete</button></td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table width="50%">
+                <tr>
+                    <th style="font-weight: bold; font-size:large; background-color:aqua">Additional Insured</th>
+                </tr>
+                <tr>
+                    <td>@Model.LastOrDefault().Name</td>
+                </tr>
+                <tr>
+                    <td>@Model.LastOrDefault().DoB</td>
+                </tr>
+                <tr>
+                    <td>@Model.LastOrDefault().Coverage%</td>
+                </tr>
+                <tr>
+                    <td><button style="border-color:red;" disabled="disabled">Delete</button></td>
+                </tr>
+            </table>
+</table>
+

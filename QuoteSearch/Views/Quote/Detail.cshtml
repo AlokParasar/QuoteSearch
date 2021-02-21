@@ -1,0 +1,75 @@
+﻿@model QuoteSearch.Models.Quote
+
+@{
+    ViewBag.Title = "Search";
+}
+<script language="javascript" type="text/javascript">
+
+    function showDetails(QuoteId) {
+        $("#Partial").show();
+        $("#Partial").load("/Quote/Select/", { QuoteId: QuoteId });
+    }
+    function showDetail() {
+        if ($("#FirstName").val() != '' && $("#LastName").val() != '' && $("#FirstName").val() != undefined) {
+            $("#Empty").hide();
+            $("#Valid").hide();
+
+            $("#Partial").hide();
+            $("#Detail").load("/Quote/Result/", { FirstName: $("#FirstName").val(), LastName: $("#LastName").val() });
+        }
+        else if ($("#FirstName").val() == '' || $("#LastName").val() == '') {
+            $("#Empty").show();
+            $("#Valid").show();
+        }
+        else {
+            $("#Valid").show();
+            $("#Empty").hide();
+        }
+    }
+</script>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" style="font-weight: bold; font-size:large; vertical-align:middle;padding-top:10px;">
+        Search
+    </div>
+</nav>
+@using (Html.BeginForm("Result", "Quote", FormMethod.Post))
+{
+    <table class="table" width="100%">
+        <tr>
+            <td>First Name: @Html.TextBox("FirstName")</td>
+            <td>Status: @Html.DropDownListFor(m => m.StatusList, new SelectList(Model.StatusList), "Select Status")</td>
+            <td>Status: @Html.RadioButtonFor(m => m.Status, new SelectList(Model.StatusList))</td>
+            <td>Last Name: @Html.TextBox("LastName")</td>
+
+            <td>
+                <button style="background-color:aqua;" onclick="showDetail();"> Search</button>
+                <input id="Submit" type="submit" value="submit" />
+            </td>
+        </tr>
+    </table>
+}
+<div id="Empty" class="container" style="font-weight: bold; font-size:large; vertical-align:middle;padding-top:10px;color:red; display:none;">
+    Results not found
+</div>
+<div id="Valid" class="container" style="font-weight: bold; font-size:large; vertical-align:middle;padding-top:10px;color:red; display:none;">
+    Please enter valid Name.
+</div>
+
+<div id="Detail"></div>
+
+<div id="Partial"></div>
